@@ -13,4 +13,4 @@
   (is (eql 1154 (solve-part1 (aoc:input-file 2025 1)))))
 
 (test day01-part2
-  (is (eql nil (solve-part2 (aoc:input-file 2025 1 :test t)))))
+  (is (eql 6819 (solve-part2 (aoc:input-file 2025 1)))))
