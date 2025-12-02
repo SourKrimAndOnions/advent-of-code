@@ -32,6 +32,9 @@
                   :components
                   ((:module "day01"
                     :components ((:file "package")
+                                 (:file "solution"))))
+                  ((:module "day02"
+                    :components ((:file "package")
                                  (:file "solution"))))))))
   :in-order-to ((test-op (test-op "advent-of-code/tests"))))
 
@@ -51,6 +54,7 @@
                    (:file "day05")))
                  (:module "2025"
                   :components
-                  ((:file "day01"))))))
+                  ((:file "day01")
+                   (:file "day02"))))))
   :perform (asdf:test-op (o c)
                          (uiop:symbol-call :fiveam '#:run! :aoc-test-suite)))
