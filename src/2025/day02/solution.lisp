@@ -8,10 +8,6 @@
   (cons (parse-integer (car pair))
         (parse-integer (cadr pair))))
 
-(defun generate-range (pair)
-  (destructuring-bind (beg . end) pair
-    (loop for i from beg to end collect i)))
-
 (defun symmetric-p (num)
   (let* ((str (princ-to-string num))
          (middle (floor (length str) 2))
@@ -21,7 +17,7 @@
         num)))
 
 (defun solve-part1 (input-file)
-  "Solve part 1 of day 01."
+  "Solve part 1 of day 02."
   (loop for str-pair in (read-input input-file)
         for (beg . end) = (string->int str-pair)
         sum (loop for num from beg to end
@@ -29,7 +25,7 @@
                     sum num)))
 
 (defun solve-part2 (input-file)
-  "Solve part 2 of day 01."
+  "Solve part 2 of day 02."
   (loop for str-pair in (read-input input-file)
         for (beg . end) = (string->int str-pair)
         sum (loop for num from beg to end

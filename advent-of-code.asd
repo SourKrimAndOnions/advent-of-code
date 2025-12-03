@@ -35,6 +35,9 @@
                                  (:file "solution"))))
                   ((:module "day02"
                     :components ((:file "package")
+                                 (:file "solution"))))
+                  ((:module "day03"
+                    :components ((:file "package")
                                  (:file "solution"))))))))
   :in-order-to ((test-op (test-op "advent-of-code/tests"))))
 
